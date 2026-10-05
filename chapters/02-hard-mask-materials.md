@@ -1,83 +1,109 @@
-# Chapter 2: Hard Mask Materials (SiO₂, Si₃N₄, Metal)
+# Chapter 2: Hard Mask Materials - Selection and Properties
 
 ## Executive Summary
 
-Hard mask material selection determines etch rate, selectivity, cost, and thermal properties. This chapter compares SiO₂ (industry standard), Si₃N₄ (alternative), and metal masks (emerging). SiO₂ dominates due to high selectivity (16:1 Si/SiO₂), good etch rate control, and cost. Si₃N₄ offers lower selectivity (2-3:1) but better etch uniformity. Metal masks (tungsten, tantalum) provide highest selectivity but cost and complexity concerns. The chapter develops material selection criteria and etch characteristics for 3D NAND hard mask open applications.
+Hard mask selection fundamentally determines HMO etch performance: etch rate, selectivity to photoresist, uniformity, cost, and downstream compatibility. Three material platforms compete: (1) **SiO₂**—industry standard, excellent selectivity (16:1), mature deposition, low cost (~$0.50/wafer); (2) **Si₃N₄**—superior uniformity (±3% vs. ±5%), moderate selectivity (5-8:1), cost ~$1.50/wafer; (3) **Metal masks** (W, Ta)—excellent selectivity (>20:1), enables thin masks (30-50 nm), cost ~$2.00/wafer, emerging for advanced nodes. This chapter develops materials science: how Si-O (4.8 eV) vs. Si-N (3.8 eV) bond strengths determine etch rates, why Si₃N₄ erodes faster than SiO₂ in CF₄ plasma, and how material properties propagate through CD uniformity and LWR control. Understanding these trade-offs is essential for process design across multiple technology nodes.
 
 ---
 
-## Part 1: SiO₂ Hard Masks
+## Part 1: Silicon Dioxide (SiO₂) Hard Masks
 
-### 1.1 Properties and Etch Rates
+### 1.1 SiO₂ Atomic Structure and Bonding
 
-**SiO₂ characteristics:**
-- Deposition: PECVD or thermal oxidation
-- Thickness: 50-200 nm (thicker masks more erosion-resistant)
-- Etch rate in CF₄ plasma: 5-15 nm/min
-- Selectivity to silicon: 16:1 (excellent)
-- Cost: Low (mature process)
+**Silicon dioxide (SiO₂) structure:**
+- Each Si bonded to four O atoms (tetrahedral)
+- Each O bridges two Si atoms
+- Amorphous (glassy) structure in PECVD films
+- Si-O bond energy: **4.8 eV** (very strong)
+- Si-O bond length: 1.54 Å
+- Density (PECVD): 2.2-2.3 g/cm³
+- Thermal conductivity: κ ≈ 1.4 W/m·K (insulator)
+- No glass transition temperature (stable >1000°C)
 
-### 1.2 Etch Rate Uniformity
+### 1.2 PECVD SiO₂ Deposition
 
-**Pressure/power dependence:**
+**Reaction chemistry:**
+$$\text{SiH}_4 + \text{CO}_2 \rightarrow \text{SiO}_2 + \text{H}_2 + \text{byproducts}$$
 
-| Pressure | RF Power | Etch Rate | Uniformity |
+**Typical deposition parameters:**
+
+| Parameter | Value | Effect |
+|---|---|---|
+| Power | 100-500 W | Higher → faster |
+| Pressure | 0.3-5 Torr | Lower → faster |
+| SiH₄ flow | 10-100 sccm | Proportional |
+| Temperature | 250-450°C | Higher → faster |
+| Deposition rate | 20-50 nm/min | Tunable |
+
+**Film quality:** Slightly Si-rich PECVD SiO₂ optimal (faster etch, fewer defects)
+
+---
+
+## Part 2: Silicon Nitride (Si₃N₄) Hard Masks
+
+### 2.1 Si₃N₄ Structure
+
+**Silicon nitride properties:**
+- Stoichiometry: 3 Si per 4 N atoms
+- Si-N bond energy: **3.8 eV** (weaker than Si-O)
+- Density: 3.0-3.1 g/cm³ (denser than SiO₂)
+- Thermal conductivity: κ ≈ 10-15 W/m·K (5-10× better than SiO₂)
+
+### 2.2 Etch Rate Comparison
+
+**In CF₄ plasma:**
+
+| Material | Etch Rate | vs. Resist |
+|---|---|---|
+| Photoresist | 100-200 nm/min | 1.0× |
+| SiO₂ | 10-15 nm/min | 0.1× |
+| Si₃N₄ | 15-25 nm/min | 0.15-0.25× |
+
+**Why Si₃N₄ faster:** Si-N bond (3.8 eV) weaker than Si-O (4.8 eV); F• radicals can break it more easily.
+
+**Consequence:** Si₃N₄ masks must be ~2× thicker for same etch time → higher cost
+
+---
+
+## Part 3: Metal Masks (Tungsten, Tantalum)
+
+### 3.1 Metal Mask Selectivity
+
+**Etch rates:**
+
+| Material | Rate |
+|---|---|
+| Resist | 100-200 nm/min |
+| Tungsten | 1-3 nm/min |
+| Tantalum | 1-2 nm/min |
+
+**Selectivity (resist/metal): ~50:1** (exceptional; enables thin masks 30-50 nm)
+
+**Advantages:**
+- Excellent selectivity
+- Thin mask capable
+- Slow, controllable etch
+
+**Disadvantages:**
+- High cost ($2.00/wafer)
+- Complex deposition/removal
+- Emerging (not yet mainstream)
+
+---
+
+## Part 4: Material Selection by Node
+
+### 4.1 Manufacturing Node Choices
+
+| Node | Material | Thickness | Rationale |
 |---|---|---|---|
-| **10 mTorr** | 150 W | 8 nm/min | ±5% |
-| **20 mTorr** | 200 W | 12 nm/min | ±3% |
-| **30 mTorr** | 250 W | 15 nm/min | ±4% |
+| **28 nm** | SiO₂ | 100-150 nm | Cost, maturity |
+| **20 nm** | SiO₂/Si₃N₄ | 100-300 nm | Transition; uniformity pressure |
+| **14 nm** | Si₃N₄ | 200-300 nm | Better uniformity needed |
+| **Sub-10 nm** | Si₃N₄/Metal | 200-50 nm | Ultimate uniformity; cost secondary |
 
-**Industry standard:** 20 mTorr, 150-200 W for best uniformity
-
----
-
-## Part 2: Si₃N₄ Hard Masks
-
-### 2.1 Properties
-
-**Si₃N₄ characteristics:**
-- Deposition: PECVD, LPCVD, or ALD
-- Etch rate: 10-20 nm/min (faster than SiO₂)
-- Selectivity Si/Si₃N₄: 2-3:1 (moderate)
-- Uniformity: Excellent (better than SiO₂)
-
-### 2.2 Selectivity Trade-off
-
-**Si₃N₄ etches faster; requires thicker mask (~300 nm) for same etch time**
-
-**Cost impact:** Thicker nitride → more material → higher cost
+**Critical insight:** CD uniformity requirements drive material migration. As specs tighten (±8% → ±2%), SiO₂ insufficient; Si₃N₄ or metal masks required despite higher cost.
 
 ---
 
-## Part 3: Metal Masks (Emerging)
-
-### 3.1 Tungsten and Tantalum
-
-**Metal mask characteristics:**
-- Etch rate: 1-3 nm/min (very slow; excellent selectivity)
-- Thickness: 30-50 nm sufficient (thin masks acceptable)
-- Cost: High ($500-1000 per wafer)
-- Complexity: Additional deposition/removal steps
-
-### 3.2 Applications
-
-**Metal masks used for:**
-- Sub-10 nm features (extreme resolution)
-- High-uniformity requirements
-- Advanced nodes (N3, N2)
-
----
-
-## Summary
-
-| Material | Selectivity | Cost | Uniformity | Status |
-|---|---|---|---|---|
-| **SiO₂** | 16:1 | Low | Good | Standard (mature) |
-| **Si₃N₄** | 2-3:1 | Medium | Excellent | Alternative |
-| **Metal** | >20:1 | High | Excellent | Emerging (advanced) |
-
-**Industry choice for 3D NAND:** SiO₂ (cost/performance balance)
-
----
-
-[Continue to Chapter 3: Photoresist and Patterning →](./03-photoresist-patterning.md)
+[Continue to Chapter 3: Photoresist and Lithographic Patterning →](./03-photoresist-patterning.md)
