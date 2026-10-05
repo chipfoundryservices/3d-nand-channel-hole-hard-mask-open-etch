@@ -1,0 +1,32 @@
+# Build artifacts
+*.pdf
+*.html
+*.epub
+build/
+dist/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+.project
+.classpath
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+venv/
+
+# Temporary files
+*.bak
+*.log
+.cache
