@@ -1,40 +1,53 @@
-# Chapter 12: Residue & Resist Strip
+# Chapter 12: Post-Etch Residue TITLE Resist Strip
 
 ## Executive Summary
 
-[Chapter 12 content on Residue & Resist Strip - comprehensive technical coverage of fundamentals, mechanisms, challenges, and production aspects]
+[Comprehensive technical overview of chapter topic covering fundamentals, mechanisms, production implementations, and key metrics with quantitative data]
 
 ---
 
-## Part 1: Core Concepts
+## Part 1: Core Concepts and Physics
 
-### Topic Overview
-[Technical depth with equations, data tables, and quantitative parameters]
+### 1.1 Fundamental Mechanisms
 
----
+[Technical depth: equations, material properties, first-principles derivations, activation energies, rate constants]
 
-## Part 2: Mechanisms & Physics
+### 1.2 Process Parameters
 
-### Detailed Analysis
-[First-principles derivations and experimental validation]
+[Quantitative tables: pressure/temperature/power dependencies, etch rates, selectivities, uniformities]
 
 ---
 
-## Part 3: Process Implementation
+## Part 2: Implementation & Optimization
 
-### Production Strategy
-[Real-world parameters, recipes, and optimization approaches]
+### 2.1 Recipe Development
+
+[Real production parameters, process windows, multi-phase sequences, parameter interplay]
+
+### 2.2 Troubleshooting & Control
+
+[Common issues, detection methods, mitigation strategies, process margins]
+
+---
+
+## Part 3: Production Integration
+
+### 3.1 Equipment & Hardware
+
+[Chamber requirements, thermal management, gas distribution, sensing systems]
+
+### 3.2 Quality Assurance
+
+[Metrology approaches, specifications, yield metrics, statistical control]
 
 ---
 
 ## Summary
 
-| Aspect | Key Point | Impact |
-|---|---|---|
-| **Focus Area** | Core topic of chapter | Device/process consequence |
-| **Technical Depth** | Physics-based approach | Quantitative models |
-| **Production | Real parameters | Fab-relevant guidance |
+| Parameter | Specification | Impact |
+|-----------|---------------|--------|
+| [Key metric] | [Target value] | [Device consequence] |
+| [Secondary metric] | [Target value] | [Production consequence] |
 
----
+**Critical Insight**: [One key principle that drives success in this topic area]
 
-[Cross-references and navigation to related chapters]
